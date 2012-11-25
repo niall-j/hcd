@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  caption: MyText
+  src: MyString
+  attach_to_project: 1
+  position: 1
+  published: false
+  height: 1
+  width: 1
+  resolution: 1
+  color_profile: MyString
+
+two:
+  name: MyString
+  caption: MyText
+  src: MyString
+  attach_to_project: 1
+  position: 1
+  published: false
+  height: 1
+  width: 1
+  resolution: 1
+  color_profile: MyString

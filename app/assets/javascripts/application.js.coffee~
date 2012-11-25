@@ -1,0 +1,13 @@
+
+  # Convenience for forms or links that return HTML from a remote ajax call.
+  #The returned markup will be inserted into the element id specified.
+  #
+  $ ->
+  $("form[data-update-target]").on "ajax:success", (evt, data) ->
+    target = $(this).data("update-target")
+    $("#" + target).html data["attachmentPartial"]
+    
+    #alert(data['attachmentPartial'])
+    $(data).setUpPortfolioSlide()
+
+

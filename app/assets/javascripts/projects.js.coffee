@@ -1,0 +1,49 @@
+# Place all the behaviors and hooks related to the matching controller here.
+# All this logic will automatically be available in application.js.
+# You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
+
+  #    	we need: 
+  #      project description (html)
+  #      title (string) to modify window title
+  #      permalink (string) to modify url
+  #      images(array) to populate with thumbnails
+  
+preload = ->
+  console.log("called preload() ....")
+  arrr = this
+  #@each ->
+  #  $("<img/>")[0].src = this
+  console.log("I am called preload() and I have " + arrr[0] + " stored")
+    
+mapThumbs = ->
+	console.log("called mapThumbs()")
+	thumbs = $("#projectThumbnails img").map(->
+  		@src
+  		console.log(@src)
+	)
+	
+	preload(thumbs)
+	
+	#$("#projectThumbnails .loaderOverlay").fadeOut(1000)
+
+$ -> 
+	$("#projectThumbnails .loaderOverlay").show()
+	mapThumbs()
+	$("#projectThumbnails .loaderOverlay").fadeOut(2000)
+	
+	$("#imgOverlay").click ->
+		$(this).fadeOut(1200)
+		
+	$("#projectThumbnails img").click ->
+		$("#imgOverlay").fadeIn(1200)
+		
+	$("#selectCategory li:first").addClass("selected").fadeIn(1200)	
+	
+	$("#selectCategory li").click ->
+		$("ul.dropdown li.selected").removeClass("selected")
+		$(this).addClass("selected").fadeIn(600)
+	
+   
+
+
+

@@ -1,0 +1,69 @@
+// This is a manifest file that'll be compiled into application.js, which will include all the files
+// listed below.
+//
+// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
+// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
+//
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// the compiled file.
+//
+// WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
+// GO AFTER THE REQUIRES BELOW.
+//
+//= require jquery
+//= require jquery_ujs
+//= require jquery.address-1.5.js
+//= require_tree .
+
+				
+$(function() {                       
+    
+	$.fn.setUpPortfolioSlide = function() { 
+    	//alert($(this).length)
+    	var obj = $(this)
+    	
+    	console.log(obj[0].text.attachmentPartial);
+    	$.address.title(obj[0].locals.page_title)
+    	$("#projectTitle").text(obj[0].locals.page_title)
+    	$("#projectInfo").html(obj[0].text.attachmentPartial)
+    	 .text()
+    	 .fadeIn(1500)
+	}
+	$('form[data-update-target],[data-remote][data-replace]')
+    .data('type', 'html')
+    .on('ajax:success', function(event, data) {
+      var $this = $(this);
+      $($this.data('replace'))
+       .html(data)
+    	 .hide()
+    	 .fadeIn(1500)
+      $this.trigger('ajax:replaced');
+      console.log("ajax replacement should have occurred");
+    });
+    
+    /*
+    $('').on('ajax:success', function(evt, data) {
+        var target = $(this).data('update-target');
+        //$('#' + target).html(data['attachmentPartial']);
+        //alert(data['attachmentPartial'])
+        
+        var pageData = Array();
+        
+        pageData['title'] = data.locals.page_title;
+		  pageData['content'] = data.text.attachmentPartial;
+		  pageData['images'] = data.locals.images;
+        
+        //alert(pageData.length)
+        
+    	  $(data).setUpPortfolioSlide()
+    	  
+    });
+    */
+    $("select#project_id").change(function(){
+    	$(this).parent("form").submit()
+    });
+    
+});
+
+
+

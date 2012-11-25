@@ -1,0 +1,55 @@
+form{
+	select, input, textarea, button{
+		background:none;
+		border:none;
+		-webkit-appearance: none;
+		background: rgba(0,0,0,0.25);
+		border: 2px solid rgba(0, 0, 0, 0.3);
+		font-size:20px;
+		line-height:28px;
+   	background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.55)), to(rgba(0,0,0,0.25)));
+   	border-radius:2px;
+   	-webkit-border-radius: 2px;
+	}
+}
+
+.align-left{
+	text-align:right;		
+	}
+	
+.align-right{
+	text-align:right;		
+	}
+
+.align-center{
+	text-align:center;		
+	}
+.float-left{
+	float: left;
+	}
+ul.dropdown{
+	text-align:left;
+	list-style:none; margin:0;padding:0;
+	width:auto;
+	width:400px;
+	height:20px;
+	overflow:hidden;
+	li{
+		
+		padding:0 12px;
+		line-height:20px;	
+		color:#fff;
+		float:left;
+		width:auto;
+			a{ color:#fff; text-decoration:none; }
+			}
+			li:first-child{ 
+				display:block; 
+				}
+			:hover {cursor:pointer;}
+			.selected{ 
+				background-color:#000;
+				a{ color:fff000; }
+			}
+			}
+

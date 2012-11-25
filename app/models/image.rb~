@@ -1,0 +1,4 @@
+class Image < ActiveRecord::Base
+  attr_accessible :attach_to_project, :caption, :color_profile, :height, :name, :position, :published, :resolution, :src, :width
+  belongs_to :project
+end

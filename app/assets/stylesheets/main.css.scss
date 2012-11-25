@@ -1,0 +1,163 @@
+// Place all the styles related to the Projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+ html{
+	margin:0; padding:0;
+	position: relative;	
+}
+body.main{
+	color:#000;
+	
+   background-color:#fff;
+   
+	
+   background-image:url(http://www.homedesignhome.com/wp-content/uploads/2009/12/Minimalist-Interior-Design.jpg);
+	background-size:cover;
+	
+	
+	background-attachment:fixed;
+	/**/
+	background-color: rgba(55,45,35,1);
+	margin:0; padding:0;
+	position: relative;	
+	overflow: scroll-y;
+	text-align: center;
+		.container{
+			
+			}
+		ul.grid{
+			padding:0; margin:0 auto;
+			width:100%;
+			list-style:none;
+			li{
+					float:left;
+					width:20%;
+					overflow:auto;
+					margin:0;
+					.container{ background: rgba(0,0,0,0.5); margin:0 6px 6px 0 ; padding:6px;}
+					.imgDisplay{
+						height:100px;
+						margin:6px 6px 0 6px;
+						background-color: #fff;
+						background-image:url(http://www.design-building.com/wp-content/uploads/2012/11/Minimalist-Living-Room-Design-3.jpg);
+						background-size:cover;
+						background-attachment:fixed;
+						}
+					.info{
+							margin:0 6px 6px 6px; padding:6px;
+							background-color: #000;
+							background: #fff;
+						}
+			}
+		}
+		div#imgOverlay{
+			height:100%; width:100%; top:0; left:0;
+			position:fixed; z-index:2;
+			background-color: rgba(55,45,35,1);
+			background-image:url(http://www.design-building.com/wp-content/uploads/2012/11/Minimalist-Living-Room-Design-3.jpg);
+			background-size:cover;
+			background-attachment:fixed;
+			display:none;
+			}
+		header {
+				background: rgba(0,0,0,0.25);
+				margin:0 0 12px 0; padding:12px 0 0 0;
+  		      width:100%; text-align:center;
+  		      #top{
+  		      	margin:0 4%; width: 92%; min-width:800px;
+   				max-width:1600px;
+  					text-align:left;
+  		      	}
+				nav{
+  					margin:0 4%; width: 92%; min-width:800px;
+   				max-width:1600px;
+  					text-align:left;
+  					ul.navMain{
+  						margin:0 auto; padding:0; list-style:none; width:100%; height:30px;
+  						li{
+  							float:left; padding:0 0 4px 0; margin-right:12px; width:auto; height:24px; line-height:26px;
+  								a{ color:#fff; text-decoration:none; font-size: 1.2em; font-weight:bold;}
+  								a:visited { 	}
+  								
+  							}
+  						li:hover{
+  							border-bottom:2px solid #000;
+  								> a{  }
+  							}
+  						}
+  						li.selected { border-bottom:2px solid #fff000; }
+				}	
+			}
+		#main{
+			margin:0 4%; width: 92%; min-width:800px;
+   		max-width:1600px;
+  			text-align: left;
+			position:relative;
+				ul#projectNav{
+					display:none;
+					width:30px;
+					list-style:none;
+					padding:0; margin:0;
+					position:relative; float:left;
+					left:-31px;
+					min-height:240px;
+					border-right:1px solid rgba(0,0,0,0.35);
+				li{
+					height:30px; width:30px; border-bottom:1px solid rgba(0,0,0,0.75);
+					margin-bottom:1px;
+					line-height:30px;
+					font-size:24px;
+					text-align:center;
+					background: rgba(0,0,0,0.25);
+					:hover{ cursor:pointer; background: rgba(0,0,0,0.75); }
+					}
+				}
+				#projectInfo{
+					
+					
+					span#projectTitle{
+							
+ 							font-size: 1.5em; line-height: 40px; 
+							padding: 0; 
+							color: #fff;
+							text-shadow:0 0 1px #000;
+							width:auto;
+						}
+						span#projectLocation{
+								padding:0;
+								margin:0 0 6px 0;
+ 								font-size: 0.8em;
+								line-height:15px;
+								font-style:italic;
+								color: #fff;
+								text-shadow:0 1px 0 #000;
+								width:auto;
+						}		
+  					}
+				#projectThumbnails{
+				/**/
+				position:fixed; z-index:2;
+				width:998px;
+				bottom:24px;
+				height:96px;
+				margin:12px 0;
+				border:1px solid #333;
+				background: rgba(0,0,0,0.25);
+				bottom:0;
+					div.loaderOverlay{
+						background-image: -o-linear-gradient(top,rgba(0,0,0,0.5),rgba(0,0,0,0.25));
+						background: rgba(0,0,0,0.45);
+						position:absolute;
+						width:1000px;
+						height:96px;
+						z-index:1;
+						}
+					img.thumb{
+						float:left; width:84px; height:84px; margin:6px 0 6px 6px;
+						}
+			}
+	}
+}
+
+

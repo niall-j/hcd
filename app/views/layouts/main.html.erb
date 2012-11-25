@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= @pagetitle %></title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="main">
+<div id="imgOverlay"></div>
+<header>
+	<div id="top">
+		<div id="logo"></div>
+	</div>
+	<nav>
+		<ul class="navMain">
+				<%# @pagenav.each do |p| %>
+					<li><%# link_to p.name, {:controller=>:pages, :action=>:show, :id=> p.id}, :remote=>true, :"data-replace" => 'body' %></li>	
+				<%# end %>
+		</ul>
+		<div class="clear-both"></div>
+	</nav>
+</header>
+
+<div id="main">
+	<div class="form align-right" id="select-project">
+		<%= form_tag({:action => 'view'}, :remote => true, :'data-update-target' => 'slide') do %>
+    		<%= select_tag(:project_id, options_from_collection_for_select(Project.all, :id, :title)) %>
+    		<noscript>
+    		<%= submit_tag 'Submit', :disable_with => 'Please wait...', :class => 'submit' %>
+    		</noscript>
+		<% end %>
+	</div>
+	<div id="slide">
+		
+		<ul id="projectNav">
+			<li><a href="#" class="link" title="Project Overview">A</a></li>
+			<li><a href="#" class="link" title="Something">B</a></li>
+			<li><a href="#" class="link" title="Something Else">C</a></li>
+		</ul>
+		
+		<%= yield %>
+		
+	</div>
+	
+	
+	
+	
+</div>
+
+</body>
+</html>

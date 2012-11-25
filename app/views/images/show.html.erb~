@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @image.name %>
+</p>
+
+<p>
+  <b>Caption:</b>
+  <%= @image.caption %>
+</p>
+
+<p>
+  <b>Src:</b>
+  <%= @image.src %>
+</p>
+
+<p>
+  <b>Attach to project:</b>
+  <%= @image.attach_to_project %>
+</p>
+
+<p>
+  <b>Position:</b>
+  <%= @image.position %>
+</p>
+
+<p>
+  <b>Published:</b>
+  <%= @image.published %>
+</p>
+
+<p>
+  <b>Height:</b>
+  <%= @image.height %>
+</p>
+
+<p>
+  <b>Width:</b>
+  <%= @image.width %>
+</p>
+
+<p>
+  <b>Resolution:</b>
+  <%= @image.resolution %>
+</p>
+
+<p>
+  <b>Color profile:</b>
+  <%= @image.color_profile %>
+</p>
+
+
+<%= link_to 'Edit', edit_image_path(@image) %> |
+<%= link_to 'Back', images_path %>

@@ -1,0 +1,22 @@
+<ul id="grid" class="grid">
+<% @projects.each do |project| %>
+  <li>
+  <div class="container">
+  <div class="imgDisplay"><%# project.images.inspect %></div>
+  	<div class="info">
+    <strong><%= project.title %></strong>
+    <br />
+    <em><%= project.location %></em>
+    
+    	<div>
+    		<%= link_to 'View Project', :controller => "projects", :action => "slides", :permalink => project.permalink %>
+    		<%#link_to 'Show', project %>
+    		<%#link_to 'Edit', edit_project_path(project) %>
+    		<%#link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+   	</div>
+   	
+   </div>
+   </div>
+  </li>
+<% end %>
+</ul>

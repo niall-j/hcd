@@ -1,0 +1,25 @@
+
+
+<div id="projectInfo">
+
+	<span id="projectTitle"><%= @project.title %></span>
+	
+	<div class="clear-both"></div>
+	<span id="projectLocation"><%= @project.location %></span>
+	
+	<div class="clear-both"></div>
+
+	<%= simple_format @project.content %>
+	
+</div>
+
+<%= link_to 'Edit', edit_project_path(@project) %>
+
+<div class="clear-both"></div>
+
+<div id="projectThumbnails">
+	<div class="loaderOverlay"></div>
+	<% @project.images.each do |img|%>
+		<img class="thumb" title="<%= img.name %>" caption="<%= img.caption %>" src="<%= img.src %>" />
+	<% end %>
+</div>
